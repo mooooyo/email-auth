@@ -8,7 +8,7 @@
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint --fix && prettier --write ./**/*.{js,jsx,ts,tsx,css,scss,md}",
+    "lint": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,md,json}\" && next lint --fix",
     "prepare": "husky"
   },
   "dependencies": {
