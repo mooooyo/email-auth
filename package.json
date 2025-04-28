@@ -9,6 +9,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint --fix",
+    "prettier": "prettier --write ./**/*.{js,jsx,ts,tsx,css,scss,md}",
     "prepare": "husky"
   },
   "dependencies": {
