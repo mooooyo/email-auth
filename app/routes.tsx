@@ -1,4 +1,3 @@
-import React from 'react';
 import { createBrowserRouter } from 'react-router';
 import { Root } from './root';
 import Dashboard from './routes/_index';
