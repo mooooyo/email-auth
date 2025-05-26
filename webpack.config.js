@@ -1,9 +1,17 @@
 import path from "path";
 import HtmlWebpackPlugin from "html-webpack-plugin";
 import ForkTsCheckerWebpackPlugin from "fork-ts-checker-webpack-plugin";
+import webpack from "webpack";
+import dotenv from "dotenv";
+
+const APP_ENV = process.env.NODE_ENV || "dev";
+dotenv.config({ path: `.env.${APP_ENV}` });
+
+const prod = ["production", "staging", "preprod"].includes(APP_ENV);
+const mode = prod ? "production" : "development";
 
 export default {
-  mode: "development",
+  mode,
   entry: "./app/index.tsx",
   output: {
     path: path.resolve("dist"),
@@ -38,6 +46,9 @@ export default {
           syntactic: true,
         },
       },
+    }),
+    new webpack.DefinePlugin({
+      "process.env": JSON.stringify(process.env),
     }),
   ],
   devServer: {
