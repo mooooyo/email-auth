@@ -1,16 +1,16 @@
-import React from "react";
-import { createBrowserRouter } from "react-router";
-import { Root } from "./root";
-import Home from "./routes/_index";
+import React from 'react';
+import { createBrowserRouter } from 'react-router';
+import { Root } from './root';
+import Dashboard from './routes/_index';
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <Root />,
   },
   {
-    path: "/about",
-    element: <Home />,
+    path: '/dashboard',
+    element: <Dashboard />,
   },
 ]);
 
