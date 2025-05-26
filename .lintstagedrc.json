@@ -1,3 +1,4 @@
 {
-  "app/**/*.{ts,tsx}": ["npx eslint --fix --no-error-on-unmatched-pattern", "npx prettier --write"]
+  "app/**/*.{ts,tsx}": ["npx eslint --fix --no-error-on-unmatched-pattern", "npx prettier --write"],
+  "app/**/*.{json,css}": ["npx prettier --write"]
 }
