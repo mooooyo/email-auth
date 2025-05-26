@@ -25,6 +25,12 @@ export default [
         ecmaVersion: 2021,
         sourceType: 'module',
       },
+      globals: {
+        window: 'readonly',
+        document: 'readonly',
+        console: 'readonly',
+        process: 'readonly',
+      },
     },
     settings: {
       react: { version: 'detect' },
