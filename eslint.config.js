@@ -31,6 +31,7 @@ export default [
         console: 'readonly',
         process: 'readonly',
       },
+
     },
     settings: {
       react: { version: 'detect' },
