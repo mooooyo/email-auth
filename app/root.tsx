@@ -1,17 +1,13 @@
 import { Outlet } from 'react-router';
-import { Input } from './components/ui/input';
-import { Button } from './components/ui/button';
+import { AuthProvider } from './contexts/AuthContext';
+import './globals.css';
 
 export function Root() {
   return (
-    <>
-      <head></head>
-      <main>
-        <h1>Hello World!!!!!!!!!!!!!!!!!!</h1>
-        <Input />
-        <Button>Click me </Button>
+    <AuthProvider>
+      <div className="min-h-screen bg-gray-50">
         <Outlet />
-      </main>
-    </>
+      </div>
+    </AuthProvider>
   );
 }
